@@ -30,13 +30,6 @@ const RestuarantSchema = new mongoose.Schema({
 })
 
 
-
-//Query Helper
-RestuarantSchema.query.sortBy = function(flag){
-    return this.sort({ 'restaurant_id': flag, }).select("_id cuisine name city restaurant_id")
-}
-
-
 RestuarantSchema.post('init', (doc) => {
     console.log('%s has been initialized to the db', doc._id);
 });

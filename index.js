@@ -6,9 +6,8 @@ const { db } = require('./models/Restaurant');
 dotenv.config();
 
 const app = express();
-app.use(express.json()); // Make sure it comes back as json
+app.use(express.json());
 
-//TODO - Replace you Connection String here
 mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@fullstackcluster.by4l3g9.mongodb.net/?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useUnifiedTopology: true
